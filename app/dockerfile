@@ -1,0 +1,12 @@
+#La imagen base es node en la version indicada
+FROM node:20.11.0-alpine3.19
+RUN mkdir -p /opt/app
+WORKDIR /opt/apt
+COPY package.json .
+COPY src/ .
+#Instalamos las dependencias y los paquetes de nuestro proyecto
+RUN npm install 
+EXPOSE 3000
+CMD ["npm", "start"]
+
+
