@@ -4,7 +4,6 @@ RUN mkdir -p /opt/app
 WORKDIR /opt/apt
 COPY package.json .
 COPY src/ .
-#Instalamos las dependencias y los paquetes de nuestro proyecto
 RUN npm install 
 EXPOSE 3000
 CMD ["npm", "start"]
